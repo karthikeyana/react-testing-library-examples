@@ -31,5 +31,5 @@ function render(ui, options) {
 // I promise it is. Just try console.log(global.IntlPolyfill)
 test('it should render FormattedDate and have a formated pt date', () => {
   render(<FormatDateView />)
-  expect(screen.getByTestId('date-display')).toHaveTextContent('11/03/2019')
+  expect(screen.getByTestId('date-display')).toHaveTextContent('11/03/2019' || '03/11/2019')
 })
