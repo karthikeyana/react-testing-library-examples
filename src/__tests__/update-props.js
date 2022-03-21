@@ -3,21 +3,8 @@
 // that your first call created for you.
 
 import * as React from 'react'
-import {useRef} from 'react'
 import {render, screen} from '@testing-library/react'
-
-let idCounter = 1
-
-const NumberDisplay = ({number}) => {
-  const id = useRef(idCounter++) // to ensure we don't remount a different instance
-
-  return (
-    <div>
-      <span data-testid="number-display">{number}</span>
-      <span data-testid="instance-id">{id.current}</span>
-    </div>
-  )
-}
+import {NumberDisplay} from '../components/update-props';
 
 test('calling render with the same component on the same container does not remount', () => {
   const {rerender} = render(<NumberDisplay number={1} />)

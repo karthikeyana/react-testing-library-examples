@@ -4,7 +4,7 @@ import {setupServer} from 'msw/node'
 import {render, screen, waitFor} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import '@testing-library/jest-dom/extend-expect'
-import {FetchGreeting} from '../fetch-greeting'
+import {FetchGreeting} from '../components/fetch-greeting'
 
 const server = setupServer(
   rest.get('/greeting', (req, res, ctx) => {

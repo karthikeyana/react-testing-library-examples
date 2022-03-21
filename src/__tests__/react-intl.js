@@ -1,21 +1,9 @@
 import 'intl'
 import * as React from 'react'
 import {render as rtlRender, screen} from '@testing-library/react'
-import {IntlProvider, FormattedDate} from 'react-intl'
+import {IntlProvider} from 'react-intl'
+import {FormatDateView} from '../components/react-intl';
 
-const FormatDateView = () => {
-  return (
-    <div data-testid="date-display">
-      <FormattedDate
-        value="2019-03-11"
-        timeZone="utc"
-        day="2-digit"
-        month="2-digit"
-        year="numeric"
-      />
-    </div>
-  )
-}
 
 function render(ui, options) {
   function Wrapper({children}) {

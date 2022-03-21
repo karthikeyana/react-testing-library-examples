@@ -1,49 +1,6 @@
 import {render as rtlRender, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import * as React from 'react'
-import {
-  Link,
-  Route,
-  BrowserRouter as Router,
-  Switch,
-  useLocation,
-} from 'react-router-dom'
-
-const About = () => <div>You are on the about page</div>
-const Home = () => <div>You are home</div>
-const NoMatch = () => <div>No match</div>
-
-const LocationDisplay = () => {
-  const location = useLocation()
-
-  return <div data-testid="location-display">{location.pathname}</div>
-}
-
-const App = () => (
-  <div>
-    <Link to="/">Home</Link>
-
-    <Link to="/about">About</Link>
-
-    <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-
-      <Route path="/about">
-        <About />
-      </Route>
-
-      <Route>
-        <NoMatch />
-      </Route>
-    </Switch>
-
-    <LocationDisplay />
-  </div>
-)
-
-// Ok, so here's what your tests might look like
+import {App,Router,LocationDisplay} from '../components/react-router';
 
 // this is a handy function that I would utilize for any component
 // that relies on the router being in context

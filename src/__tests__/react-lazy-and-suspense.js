@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {render, screen} from '@testing-library/react'
 
-const LazyComponent = React.lazy(() => import('../lazy-component'))
+const LazyComponent = React.lazy(() => import('../components/lazy-component'))
 
 function Main() {
   return (

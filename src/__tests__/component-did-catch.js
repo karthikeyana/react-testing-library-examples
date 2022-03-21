@@ -3,10 +3,10 @@
 import * as React from 'react'
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import {reportError} from '../utils'
-import {BombButton} from '../component-did-catch'
+import {reportError} from '../utils/utils'
+import {BombButton} from '../components/component-did-catch'
 
-jest.mock('../utils', () => {
+jest.mock('../utils/utils', () => {
   return {
     reportError: jest.fn(() => Promise.resolve({success: true})),
   }

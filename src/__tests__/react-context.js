@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {render, screen} from '@testing-library/react'
-import {NameContext, NameProvider, NameConsumer} from '../react-context'
+import {NameContext, NameProvider, NameConsumer} from '../components/react-context'
 
 /**
  * Test default values by rendering a context consumer without a

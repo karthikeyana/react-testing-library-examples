@@ -1,17 +1,7 @@
 import * as React from 'react'
 import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-
-function UpperInput() {
-  const [upper, setUpper] = React.useState('')
-  const handleChange = e => setUpper(e.currentTarget.value.toUpperCase())
-  return (
-    <div>
-      <label htmlFor="upper">Upper</label>
-      <input id="upper" value={upper} onChange={handleChange} />
-    </div>
-  )
-}
+import UpperInput from '../components/on-change';
 
 test('sets the value to the upper version of the value', () => {
   render(<UpperInput />)

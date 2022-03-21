@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {reportError} from './utils'
+import {reportError} from '../utils/utils'
 
 class ErrorBoundary extends React.Component {
   state = {hasError: false}
